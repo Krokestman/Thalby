@@ -1,0 +1,57 @@
+.page__main-banner {
+   background-color: $secondary-color;
+}
+
+.main__container {
+   display: flex;
+}
+
+.main-banner__left-holder {
+   width: 50%;
+}
+
+.main-banner__right-holder {
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   img {
+      width: 100%;
+   }
+}
+
+.main-banner__title {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 6rem;
+   line-height: calc(70px/60px);
+   margin-top: 90px;
+   margin-bottom: 42px;
+}
+
+.main-banner__text {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 2.4rem;
+   line-height: calc(28/24);
+   margin-bottom: 26px;
+}
+
+.main-banner__button {
+   display: inline-block;
+   padding: 7px 23px 9px;
+   background-color: #000;
+   color: #fff;
+   border-radius: 22px;
+   cursor: pointer;
+   border: 1px solid $text-color;
+   transition: .3s;
+
+   &:hover {
+      background-color: rgba($color: #000, $alpha: .0);
+      color: $text-color;
+   }
+}

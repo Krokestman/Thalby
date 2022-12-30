@@ -1,0 +1,146 @@
+.page__sellers {
+   margin-top: 90px;
+}
+
+.sellers__container {}
+
+.sellers__title {
+   margin-bottom: 50px;
+}
+
+.sellers__list {
+   display: flex;
+}
+
+.sellers__item {
+   margin-right: 60px;
+   width: calc((100% - 2 * 60px) / 3);
+
+   &:last-child {
+      margin-right: 0;
+   }
+}
+
+.sellers-item {}
+
+.sellers-item__card {}
+
+.card {
+   border: 15px solid #000;
+   border-radius: 30px;
+   padding: 15px;
+   background-color: #D9A7E3;
+}
+
+.card__top-wrapper {
+   display: flex;
+}
+
+.card__holder_left {
+   width: 50%;
+}
+
+.card__title {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 3rem;
+   line-height: calc(27 / 30);
+}
+
+.card__sub-title {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 1.5rem;
+   line-height: calc(15 / 15);
+   margin-top: 13px;
+   margin-bottom: 20px;
+}
+
+.card__list {}
+
+.card__item {
+   border-top: 1px solid #000;
+   padding-bottom: 4px;
+   font-size: 1.6rem;
+   line-height: calc(15 / 15);
+   font-weight: 400;
+
+   &:last-child {
+      border-bottom: 1px solid #000;
+      font-weight: 700;
+   }
+}
+
+.card__logo {
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 10px;
+   position: relative;
+   cursor: default;
+
+   p {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+      border-radius: 100%;
+      background-color: #000;
+      text-align: center;
+      line-height: 20px;
+      color: #fff;
+      font-weight: 700;
+   }
+}
+
+.card__img-holder {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 10px;
+}
+
+.card__img-text {
+   position: absolute;
+   width: 110px;
+   height: 110px;
+   left: 0;
+   top: -2%;
+   border: 10px double #fff;
+   border-radius: 100%;
+   background-color: #000;
+   color: #fff;
+   font-weight: 700;
+   display: flex;
+   text-align: center;
+   align-items: center;
+}
+
+.card__img {
+   width: 290px;
+   height: 290px;
+   border: 5px solid white;
+   border-radius: 50%;
+   background-color: #fff;
+   object-fit: cover;
+   object-position: top;
+}
+
+.card__text {
+   text-align: center;
+   font-size: 1.4rem;
+
+   span {
+      font-weight: 700;
+   }
+}
+
+.sellers-item__title {}
+
+.sub-title {}
+
+.sellers-item__prise {}
+
+.sellers-item__cart {}
+
+.text-underline {}
