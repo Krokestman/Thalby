@@ -104,7 +104,8 @@ input {
   font-style: normal;
   font-weight: 700;
   font-size: 1.6rem;
-  line-height: 1.625;
+  line-height: 1.25;
+  text-align: center;
 }
 
 .header-nav__link:hover {
@@ -273,6 +274,16 @@ input {
 .sellers__item {
   margin-right: 60px;
   width: calc((100% - 120px) / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .sellers__item:last-child {
   margin-right: 0;
@@ -283,6 +294,7 @@ input {
   border-radius: 30px;
   padding: 15px;
   background-color: #D9A7E3;
+  margin-bottom: 27px;
 }
 
 .card__top-wrapper {
@@ -301,6 +313,7 @@ input {
   font-weight: 700;
   font-size: 3rem;
   line-height: 0.9;
+  max-width: 145px;
 }
 
 .card__sub-title {
@@ -314,14 +327,14 @@ input {
 }
 
 .card__item {
-  border-top: 1px solid #000;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
   padding-bottom: 4px;
   font-size: 1.6rem;
   line-height: 1;
   font-weight: 400;
 }
 .card__item:last-child {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   font-weight: 700;
 }
 
@@ -399,6 +412,60 @@ input {
   font-weight: 700;
 }
 
+.sellers-item__title {
+  width: 156px;
+  margin-bottom: 17px;
+}
+
+.sellers-item__prise {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.7rem;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.text-underline {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 20px;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .page__guides {
   margin-top: 90px;
+}
+
+.guides-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F0EFEB;
+}
+
+.guides-item_card {
+  min-width: 370px;
+  max-width: 370px;
+  margin-right: 50px;
+  position: relative;
+  z-index: 20;
+}
+.guides-item_card::after {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  content: "";
+  width: 400px;
+  height: 400px;
+  background-color: blue;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
 }
