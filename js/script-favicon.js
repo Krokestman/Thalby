@@ -12,4 +12,4 @@ function animateFavicon() {
    if (counter == 6) { counter = 1; }
 }
 
-setInterval(animateFavicon, 1000);
+setInterval(animateFavicon, 2000);

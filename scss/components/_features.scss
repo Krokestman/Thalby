@@ -1,0 +1,72 @@
+.page__features {
+   margin-top: 190px;
+
+}
+
+.features__title {
+   text-align: center;
+   margin-bottom: 70px;
+}
+
+.features__list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.features__item {
+   margin: 0 24px;
+   width: calc((100% - 12 * 24px) / 3);
+   height: 167px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   &:nth-child(-n + 3) {
+      margin-bottom: 110px;
+   }
+}
+
+.features__circle {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   background-color: $card-bacground-purple;
+   margin-bottom: 26px;
+}
+
+.features__text {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 3rem;
+   line-height: calc(35/30);
+   text-align: center;
+   width: 211px;
+   position: relative;
+}
+
+.features__circle_color_sky {
+   background-color: $features__circle_color_sky;
+}
+
+.features__circle_color_sapphire {
+   background-color: $features__circle_color_sapphire;
+}
+
+.features__circle_color_blue {
+   background-color: $features__circle_color_blue;
+}
+
+.features__circle_color_brown {
+   background-color: $features__circle_color_brown;
+}
+
+.features__circle_color_red {
+   background-color: $features__circle_color_red;
+}
+
+.features__circle_color_purple {
+   background-color: $features__circle_color_purple;
+}

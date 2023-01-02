@@ -1,75 +1,105 @@
 .page__guides {
-   margin-top: 90px;
+   margin-top: 300px;
 }
-
-.guides__container {}
-
-.guides__list {}
 
 .guides-list__item {
+   position: relative;
    display: flex;
+
    background-color: $secondary-color;
 
-
-}
-
-.guides-item {}
-
-.guides-item_card {
-   min-width: 370px;
-   max-width: 370px;
-   margin-right: 50px;
-   position: relative;
-   z-index: 20;
-
-   &::after {
+   &::before {
       position: absolute;
-      top: 0%;
-      right: 0;
       content: "";
-      width: 400px;
-      height: 400px;
-      background-color: blue;
+      width: 340px;
+      height: 340px;
       border-radius: 50%;
       transform: translate(-50%, -50%);
-      z-index: -1;
+   }
+
+   &:nth-child(1) {
+      &::before {
+         top: 12%;
+         left: 32%;
+         background-color: $card-bacground-purple;
+      }
+   }
+
+   &:nth-child(2) {
+      flex-direction: row-reverse;
+      text-align: right;
+      background-color: $tertiary-color;
+      z-index: 2;
+
+      &::before {
+         top: 84%;
+         left: 69%;
+         background-color: $card-bacground-yellow;
+      }
+
+      .guides-item__title {
+         text-align: right;
+      }
+
+      .guides-item__sub-text {
+         text-align: right;
+      }
+
+      .guides-item_card {
+         margin-right: 0px;
+         margin-left: 50px;
+         background-color: $card-bacground-yellow;
+      }
+   }
+
+   &:nth-child(3) {
+      z-index: 1;
+
+      &::before {
+         top: 85%;
+         left: 31%;
+         background-color: $card-bacground-blue;
+      }
+
+      .guides-item_card {
+         background-color: $card-bacground-blue;
+      }
    }
 }
 
-.card {}
+.guides-item_card {
+   margin-top: 80px;
+   margin-right: 50px;
+   margin-bottom: 50px;
+   min-width: 370px;
+   max-width: 370px;
+   position: relative;
+   // height: 585px;
+}
 
-.card__top-wrapper {}
+.guides-item__text-holder {
+   position: relative;
+}
 
-.card__holder_left {}
+.guides-item__title {
+   margin-top: 145px;
+   margin-bottom: 30px;
+   text-align: left;
+}
 
-.card__title {}
+.text {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 36px;
+   line-height: calc(42/36);
+}
 
-.card__sub-title {}
+.guides-item__text {
+   width: 500px;
+}
 
-.card__list {}
-
-.card__item {}
-
-.card__logo {}
-
-.card__img-holder {}
-
-.card__img-text {}
-
-.card__img {}
-
-.card__text {}
-
-.guides-item__text-holder {}
-
-.guides-item__title {}
-
-.title {}
-
-.guides-item__text {}
-
-.text {}
-
-.guides-item__sub-text {}
-
-.text-underline {}
+.guides-item__sub-text {
+   margin-top: 40px;
+   text-align: left;
+}
