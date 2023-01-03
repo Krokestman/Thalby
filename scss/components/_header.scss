@@ -34,9 +34,7 @@
    border-radius: 25%;
 }
 
-.header__logo {
-   margin-left: 150px;
-   margin-right: auto;
+.logo {
    display: inline-block;
    font-size: 3rem;
    font-weight: 700;
@@ -45,6 +43,7 @@
    font-family: 'Roboto';
    font-style: normal;
    position: relative;
+   transition: .3s;
 
    &::before {
       position: absolute;
@@ -67,8 +66,14 @@
    }
 }
 
+.header__logo {
+   margin-left: 150px;
+   margin-right: auto;
+}
+
 .header-icons__icon {
    font-size: 2.4rem;
+   transition: .3s;
 
    &:hover {
       color: rgba(#000, .91);

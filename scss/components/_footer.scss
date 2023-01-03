@@ -2,3 +2,82 @@
    background-color: #000;
    color: $footer-text-color;
 }
+
+.footer__container {
+   padding-top: 50px;
+   display: flex;
+}
+
+.main-column__logo {
+   font-size: 4.1rem;
+   margin-bottom: 25px;
+
+   a:hover {
+      animation-name: logo-text;
+      animation-duration: 7s;
+   }
+}
+
+.main-column__icons-list {
+   display: flex;
+   justify-content: space-between;
+}
+
+.main-column__icon {
+   font-size: 2.7rem;
+   color: rgba($color: #fff, $alpha: .6);
+
+   &:hover {
+      color: #fff;
+      transition: .3s;
+   }
+}
+
+.footer__about-colum {
+   margin-left: auto;
+   margin-right: 70px;
+}
+
+.footer-title {
+   margin-bottom: 35px;
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1.4rem;
+   line-height: calc(23/14);
+}
+
+.footer-text {
+   font-family: 'Roboto';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: calc(21/14);
+   transition: .2s;
+
+   &:hover {
+      color: rgba($color: #fff, $alpha: .7)
+   }
+}
+
+.about-colum__item {
+   margin-bottom: 12px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.contact-colum__item {
+   margin-bottom: 12px;
+
+   &:last-child {
+      margin-bottom: 0;
+   }
+}
+
+.footer__text {
+   margin-top: 16px;
+   text-align: center;
+   padding-bottom: 16px;
+}

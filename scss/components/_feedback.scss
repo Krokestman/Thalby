@@ -2,23 +2,48 @@
    margin-top: 80px;
    margin-bottom: 90px;
 }
-.feedback {
-}
+
 .feedback__container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   input {
+      border: 1px solid #000;
+      padding-left: 8px;
+   }
 }
+
 .feedback__title {
+   margin-bottom: 10px;
 }
-.title {
-}
+
 .feedback__sub_title {
+   text-align: center;
+   width: 450px;
+   margin-bottom: 25px;
 }
+
 .feedback__holder {
+   display: flex;
+   justify-content: space-between;
+   width: 366px;
+   margin-bottom: 18px;
 }
+
 .feedback__first-Name {
+   width: 150px;
+   height: 40px;
 }
+
 .feedback__last-Name {
+   width: 150px;
+   height: 40px;
 }
+
 .feedback__email {
-}
-.feedback__button {
+   width: 366px;
+   height: 40px;
+   margin-bottom: 16px;
 }

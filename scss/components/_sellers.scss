@@ -74,7 +74,6 @@
    justify-content: flex-end;
    margin-top: 10px;
    position: relative;
-   cursor: default;
 
    p {
       width: 20px;
@@ -132,9 +131,15 @@
 }
 
 .sellers-item__title {
-   width: 156px;
+   width: 164px;
    margin-top: 27px;
    margin-bottom: 17px;
+   text-align: center;
+   transition: 1s;
+
+   a:hover {
+      text-decoration: underline;
+   }
 }
 
 .sellers-item__prise {
@@ -156,4 +161,8 @@
    line-height: 20px;
    text-align: center;
    text-decoration-line: underline;
+
+   &:hover {
+      text-decoration-line: none;
+   }
 }
