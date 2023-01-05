@@ -11,11 +11,13 @@
 .main-column__logo {
    font-size: 4.1rem;
    margin-bottom: 25px;
+   animation: logo-text 7s linear infinite;
+   animation-play-state: paused;
 
-   a:hover {
-      animation-name: logo-text;
-      animation-duration: 7s;
+   &:hover {
+      animation-play-state: running;
    }
+
 }
 
 .main-column__icons-list {

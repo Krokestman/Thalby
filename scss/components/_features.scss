@@ -1,6 +1,5 @@
 .page__features {
    margin-top: 190px;
-
 }
 
 .features__title {
@@ -28,13 +27,7 @@
    }
 }
 
-.features__circle {
-   width: 70px;
-   height: 70px;
-   border-radius: 50%;
-   background-color: $card-bacground-purple;
-   margin-bottom: 26px;
-}
+
 
 .features__text {
    font-family: 'Roboto';
@@ -48,25 +41,38 @@
 }
 
 .features__circle_color_sky {
-   background-color: $features__circle_color_sky;
+   animation: blob-sky 6s linear infinite;
 }
 
 .features__circle_color_sapphire {
-   background-color: $features__circle_color_sapphire;
+   animation: blob-sapphire 6s linear infinite;
 }
 
 .features__circle_color_blue {
-   background-color: $features__circle_color_blue;
+   animation: blob-blue 6s linear infinite;
 }
 
 .features__circle_color_brown {
-   background-color: $features__circle_color_brown;
+   animation: blob-brown 6s linear infinite;
 }
 
 .features__circle_color_red {
-   background-color: $features__circle_color_red;
+   animation: blob-red 6s linear infinite;
 }
 
 .features__circle_color_purple {
-   background-color: $features__circle_color_purple;
+   animation: blob-purple 6s linear infinite;
+}
+
+.features__circle {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   background-color: $card-bacground-purple;
+   margin-bottom: 26px;
+   animation-play-state: paused;
+
+   &:hover {
+      animation-play-state: running;
+   }
 }
