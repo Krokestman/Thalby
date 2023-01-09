@@ -26,17 +26,26 @@
                </ul>
             </nav>
 
-            <a href="./index.html" class="header__logo logo">thalby</a>
+            <a href="index.html" class="header__logo logo">thalby</a>
 
             <ul class="header__icons header-icons list">
-               <li><a href="https://www.instagram.com/"><i class="header-icons__icon fa-brands fa-instagram link"></i></a></li>
-               <li><i class="header-icons__icon fa-solid fa-magnifying-glass link"></i></li>
-               <li><i class="header-icons__icon fa-sharp fa-solid fa-lock link"></i></li>
+               <li><a href="https://www.instagram.com/" target="_blank"><i class="header-icons__icon fa-brands fa-instagram link"></i></a></li>
+               <li id="modal-button-open"><a href="#popup" class="popup-link"><i class="header-icons__icon fa-solid fa-magnifying-glass link"></i></a> </li>
+               <li id="modal-button-close" class="is-hidden">
+                  <a href="#popup" class="close-popup "><i class="fa-sharp fa-solid fa-circle-xmark header-icons__icon"></i></a>
+               </li>
+               <li><i class="header-icons__icon close-popup fa-sharp fa-solid fa-lock link"></i></li>
             </ul>
          </div>
+         <div class="heder__modal-search modal-search popup" id="popup">
+            <div class="modal-search__container popup__content">
+               <i class="modal-search__icon fa-solid fa-magnifying-glass"></i>
+               <input class="modal-search__input" type="text" name="search" placeholder="What are you looking for?">
+            </div>
+         </div>
       </header>
-      <main class="page">
 
+      <main class="page">
          <section class="page__main-banner main-banner">
             <div class="main-banner__container">
                <div class="main-banner__left-holder">
@@ -56,9 +65,7 @@
             <div class="about__container">
                <h2 class="about__title title">Our guides explain countries and cultures.</h2>
                <p class="about__text about-text">Are you curious about the world around you? Our guides are for smart global citizens, world travelers and
-                  engaged
-                  residents
-                  who want to gain a deeper understanding of the cultures and societies they care about.</p>
+                  engaged residents who want to gain a deeper understanding of the cultures and societies they care about.</p>
                <p class="about__sub-text about-text">Available as ebooks here and on Amazon.</p>
             </div>
          </section>
@@ -97,8 +104,7 @@
                         </div>
 
                         <div class="card__text">A <Span>concise guide</Span> to heritage, as welll as the designers, artists and chefs creating at the forefront
-                           of
-                           French culture today.
+                           of French culture today.
                         </div>
                      </a>
 
@@ -392,10 +398,10 @@
                <h2 class="feedback__title title">Keep in touch</h2>
                <h5 class="feedback__sub_title sub-title">Get our travel advice, global views and travel freebies in your inbox</h5>
                <div class="feedback__holder">
-                  <input class="feedback__first-Name" type="text" name="search" placeholder="First Name">
-                  <input class="feedback__last-Name" type="text" name="search" placeholder="Last Name">
+                  <input class="feedback__first-Name" type="text" name="First Name" placeholder="First Name">
+                  <input class="feedback__last-Name" type="text" name="Last Name" placeholder="Last Name">
                </div>
-               <input class="feedback__email" type="text" name="search" placeholder="Email">
+               <input class="feedback__email" type="text" name="Email" placeholder="Email">
                <button class="feedback__button button">Subscribe</button>
             </div>
 
@@ -408,9 +414,9 @@
                <div class="main-column__logo logo"><a href="#">thalby</a></div>
 
                <ul class="main-column__icons-list">
-                  <li class="main-column__icon"><a href="https://www.instagram.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                  <li class="main-column__icon"><a href="https://www.facebook.com/"><i class="fa-brands fa-instagram"></i></a></i></li>
-                  <li class="main-column__icon"><a href="https://twitter.com/home"><i class="fa-brands fa-twitter"></i></a></i></li>
+                  <li class="main-column__icon"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                  <li class="main-column__icon"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></i></li>
+                  <li class="main-column__icon"><a href="https://twitter.com/home" target="_blank"><i class="fa-brands fa-twitter"></i></a></i></li>
                </ul>
             </div>
 
@@ -439,6 +445,8 @@
       </footer>
 
       <script src="js/script-favicon.js"></script>
+      <script src="js/pop-up.js"></script>
+      <script src="js/popup-buttons.js"></script>
    </div>
 
 </body>

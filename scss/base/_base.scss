@@ -45,6 +45,10 @@ body {
    color: #000;
 }
 
+body.lock {
+   overflow: hidden;
+}
+
 input {
    outline: none;
 }

@@ -46,6 +46,10 @@ body {
   color: #000;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 input {
   outline: none;
 }
@@ -510,6 +514,9 @@ input {
 }
 .header {
   background-color: #ffffff;
+  position: fixed;
+  width: 100vw;
+  z-index: 20;
 }
 
 .header__container {
@@ -599,8 +606,72 @@ input {
   cursor: pointer;
 }
 
+.heder__modal-search {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.heder__modal-search.ovpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-search__container {
+  padding: 10px 0;
+  min-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-search__icon {
+  font-size: 2.8rem;
+  margin-right: 15px;
+}
+
+.modal-search__input {
+  width: 100%;
+  height: 25px;
+  font-size: 2rem;
+}
+.modal-search__input::-webkit-input-placeholder {
+  font-size: 2rem;
+}
+.modal-search__input::-moz-placeholder {
+  font-size: 2rem;
+}
+.modal-search__input:-ms-input-placeholder {
+  font-size: 2rem;
+}
+.modal-search__input::-ms-input-placeholder {
+  font-size: 2rem;
+}
+.modal-search__input::placeholder {
+  font-size: 2rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
 .page__main-banner {
   background-color: #F0EFEB;
+  margin-top: 60px;
 }
 
 .main-banner__container {
@@ -1064,33 +1135,33 @@ input {
 }
 
 .features__circle_color_sky {
-  -webkit-animation: blob-sky 6s linear infinite;
-          animation: blob-sky 6s linear infinite;
+  -webkit-animation: blob-sky 4s linear infinite;
+          animation: blob-sky 4s linear infinite;
 }
 
 .features__circle_color_sapphire {
-  -webkit-animation: blob-sapphire 6s linear infinite;
-          animation: blob-sapphire 6s linear infinite;
+  -webkit-animation: blob-sapphire 4s linear infinite;
+          animation: blob-sapphire 4s linear infinite;
 }
 
 .features__circle_color_blue {
-  -webkit-animation: blob-blue 6s linear infinite;
-          animation: blob-blue 6s linear infinite;
+  -webkit-animation: blob-blue 4s linear infinite;
+          animation: blob-blue 4s linear infinite;
 }
 
 .features__circle_color_brown {
-  -webkit-animation: blob-brown 6s linear infinite;
-          animation: blob-brown 6s linear infinite;
+  -webkit-animation: blob-brown 4s linear infinite;
+          animation: blob-brown 4s linear infinite;
 }
 
 .features__circle_color_red {
-  -webkit-animation: blob-red 6s linear infinite;
-          animation: blob-red 6s linear infinite;
+  -webkit-animation: blob-red 4s linear infinite;
+          animation: blob-red 4s linear infinite;
 }
 
 .features__circle_color_purple {
-  -webkit-animation: blob-purple 6s linear infinite;
-          animation: blob-purple 6s linear infinite;
+  -webkit-animation: blob-purple 4s linear infinite;
+          animation: blob-purple 4s linear infinite;
 }
 
 .features__circle {
