@@ -43,11 +43,11 @@ function popupOpen(curentPopup) {
       }
       curentPopup.classList.add('open');
       // Закрити попап по кліку на батька
-      /*       curentPopup.addEventListener("click", function (e) {
-               if (!e.target.closest('.popup__content')) {
-                  popupClose(e.target.closest('.popup'));
-               }
-            }); */
+      curentPopup.addEventListener("click", function (e) {
+         if (!e.target.closest('.popup__content')) {
+            popupClose(e.target.closest('.popup__father-click-close'));
+         }
+      });
    }
 }
 

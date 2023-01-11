@@ -76,7 +76,7 @@
 
 .header-icons__icon {
    font-size: 2.4rem;
-   transition: .3s;
+   transition: all .3s ease 0s;
 
    &:hover {
       color: rgba(#000, .91);
@@ -85,27 +85,38 @@
 }
 
 .heder__modal-search {
-   position: absolute;
    width: 100%;
    background-color: #fff;
    border-bottom: 1px solid #000;
+   transform: translate(0px, -25%);
 }
 
+
+// Модальне вікно
 .popup {
+   position: absolute;
    opacity: 0;
    visibility: hidden;
+   transition: all .4s ease 0s;
+   z-index: 10;
 }
 
 .popup.open {
    opacity: 1;
    visibility: visible;
+   transform: translate(0px, 0px);
+
+   .modal-cart__content {
+      transform: translate(0px, 0px);
+   }
 }
 
-.heder__modal-search.ovpen {
-   opacity: 1;
-   visibility: visible;
+.is-hidden {
+   display: none;
 }
 
+
+// Модальне вікно пошук
 .modal-search__container {
    padding: 10px 0;
    min-height: 40px;
@@ -128,6 +139,64 @@
    }
 }
 
-.is-hidden {
-   display: none;
+
+
+
+
+// Модальне вікно карти покупок
+.heder__modal-cart {
+   min-width: 100vw;
+   min-height: 100vh;
+   background-color: rgba(0, 0, 0, .5);
+   top: 0;
+}
+
+.modal-cart__content {
+   position: fixed;
+   top: 0;
+   right: 0;
+   min-width: 32%;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   transform: translate(100%, 0px);
+   transition: all .4s ease 0s;
+}
+
+.modal-cart__header {
+   background-color: #e2e0e2;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px;
+}
+
+.modal-cart__title {
+   font-weight: 700;
+   font-size: 2.2rem;
+   line-height: 1.18;
+   text-align: center;
+}
+
+.modal-cart__body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   flex: 1 1 auto;
+}
+
+.modal-cart__empty {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.modal-cart__img {
+   margin-bottom: 20px;
+}
+
+.modal-cart__text {
+   color: #868785;
 }

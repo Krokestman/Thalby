@@ -30,17 +30,53 @@
 
             <ul class="header__icons header-icons list">
                <li><a href="https://www.instagram.com/" target="_blank"><i class="header-icons__icon fa-brands fa-instagram link"></i></a></li>
-               <li id="modal-button-open"><a href="#popup" class="popup-link"><i class="header-icons__icon fa-solid fa-magnifying-glass link"></i></a> </li>
-               <li id="modal-button-close" class="is-hidden">
-                  <a href="#popup" class="close-popup "><i class="fa-sharp fa-solid fa-circle-xmark header-icons__icon"></i></a>
+               <li id="modal-button-open"><a href="#popup-search" class="popup-link"><i class="header-icons__icon fa-solid fa-magnifying-glass link"></i></a>
                </li>
-               <li><i class="header-icons__icon close-popup fa-sharp fa-solid fa-lock link"></i></li>
+               <li id="modal-button-close" class="is-hidden">
+                  <a href="#popup-search" class="close-popup "><i class="fa-sharp fa-solid fa-circle-xmark header-icons__icon"></i></a>
+               </li>
+               <li id="modal-button-open">
+                  <a href="#popup-cart" class="popup-link"><i class="header-icons__icon close-popup fa-sharp fa-solid fa-lock link"></i></a>
+               </li>
             </ul>
          </div>
-         <div class="heder__modal-search modal-search popup" id="popup">
+
+         <div class="heder__modal-search modal-search popup" id="popup-search">
             <div class="modal-search__container popup__content">
                <i class="modal-search__icon fa-solid fa-magnifying-glass"></i>
                <input class="modal-search__input" type="text" name="search" placeholder="What are you looking for?">
+            </div>
+         </div>
+
+         <div class="heder__modal-cart modal-cart popup__father-click-close popup" id="popup-cart">
+            <div class="modal-cart__content popup__content">
+
+               <div class="modal-cart__header">
+                  <h1 class="modal-cart__title">Shopping Cart</h1>
+                  <li class="modal-cart__button-close" id="modal-button-close">
+                     <a href="#popup-cart" class="close-popup"><i class="fa-sharp fa-solid fa-circle-xmark header-icons__icon"></i></a>
+                  </li>
+               </div>
+
+               <div class="modal-cart__body">
+                  <div class="modal-cart__empty">
+                     <svg class="modal-cart__img" width="56" viewBox="0 0 65 74" xmlns="http://www.w3.org/2000/svg">
+                        <g fill-rule="nonzero" fill="none">
+                           <path
+                              d="M64.407 9.856L53.605 0H11.371L.569 9.856A1.548 1.548 0 00.1 11.603c.235.619.843 1.031 1.524 1.031h61.727a1.62 1.62 0 001.522-1.031 1.545 1.545 0 00-.467-1.747z"
+                              fill="#C4C4C4"></path>
+                           <path
+                              d="M63.351 9.927H1.624C.728 9.927 0 10.644 0 11.529v59.267C0 72.566 1.454 74 3.249 74h58.478c1.795 0 3.249-1.434 3.249-3.204V11.53c0-.885-.728-1.602-1.625-1.602z"
+                              fill="#E4E4E4"></path>
+                           <path
+                              d="M32.488 45.122c-7.963 0-14.44-6.447-14.44-14.37v-4.79a1.6 1.6 0 011.605-1.596 1.6 1.6 0 011.604 1.596v4.79c0 6.163 5.04 11.177 11.23 11.177 6.192 0 11.231-5.014 11.231-11.177v-4.79a1.6 1.6 0 011.604-1.596 1.6 1.6 0 011.605 1.596v4.79c0 7.923-6.477 14.37-14.44 14.37z"
+                              fill="#6D6D6D"></path>
+                        </g>
+                     </svg>
+                     <p class="modal-cart__text">Your cart is empty.</p>
+                  </div>
+               </div>
+
             </div>
          </div>
       </header>
