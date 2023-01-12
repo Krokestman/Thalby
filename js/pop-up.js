@@ -5,7 +5,7 @@ const lockPadding = document.querySelectorAll(".lock-padding");
 
 let unlock = true;
 
-const timeout = 100;
+const timeout = 400;
 
 if (popupLinks.length > 0) {
    for (let index = 0; index < popupLinks.length; index++) {
@@ -42,6 +42,7 @@ function popupOpen(curentPopup) {
          bodyLock();
       }
       curentPopup.classList.add('open');
+      toggleModal();
       // Закрити попап по кліку на батька
       curentPopup.addEventListener("click", function (e) {
          if (!e.target.closest('.popup__content')) {
@@ -54,6 +55,7 @@ function popupOpen(curentPopup) {
 function popupClose(popupActive, doUnlock = true) {
    if (unlock) {
       popupActive.classList.remove('open');
+      toggleModal();
       if (doUnlock) {
          bodyUnLock();
       }
@@ -94,4 +96,24 @@ function bodyUnLock() {
    setTimeout(function () {
       unlock = true;
    }, timeout);
+}
+// заміняє одну кнопку на іншу
+const refs = {
+   modalButtonOpen: document.getElementById("modal-button-open"),
+   modalButtonClose: document.getElementById("modal-button-close"),
+};
+
+function toggleModal() {
+   let ovpen = false;
+   refs.modalButtonOpen.classList.toggle("is-hidden");
+   // refs.modalButtonOpen.classList.toggle("absolute");
+   setTimeout(function () {
+      refs.modalButtonOpen.classList.toggle("absolute");
+   }, timeout);
+
+   refs.modalButtonClose.classList.toggle("is-hidden");
+   setTimeout(function () {
+      refs.modalButtonClose.classList.toggle("absolute");
+   }, timeout);
+
 }
