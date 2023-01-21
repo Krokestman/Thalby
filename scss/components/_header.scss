@@ -75,6 +75,8 @@
 }
 
 .header-icons__icon {
+   width: 24px;
+   height: 24px;
    font-size: 2.4rem;
    transition: all .3s ease 0s;
 
@@ -92,7 +94,7 @@
 }
 
 
-// Модальне вікно
+// Модальне вікно=================================================================
 .popup {
    position: absolute;
    opacity: 0;
@@ -111,19 +113,17 @@
    }
 }
 
-.is-hidden {
-   opacity: 0;
-   visibility: hidden;
-   transform: rotate(90deg);
+.header-icons__icon_switcher {
    transition: all .4s ease 0s;
 }
 
-.absolute {
-   top: -100%;
-   position: absolute;
+.animation {
+   transform: rotate(180deg);
 }
 
-// Модальне вікно пошук
+
+
+// Модальне вікно пошук=========================================================
 .modal-search__container {
    padding: 10px 0;
    min-height: 40px;
@@ -146,9 +146,7 @@
    }
 }
 
-.modal-button-close {}
-
-// Модальне вікно карти покупок
+// Модальне вікно карти покупок======================================================
 .heder__modal-cart {
    min-width: 100vw;
    min-height: 100vh;

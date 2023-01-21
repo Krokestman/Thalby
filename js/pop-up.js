@@ -1,4 +1,4 @@
-const popupLinks = document.querySelectorAll('.popup-link');
+const popupLinks = document.querySelectorAll('.popup-open');
 
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll(".lock-padding");
@@ -19,13 +19,14 @@ if (popupLinks.length > 0) {
    }
 }
 
-const popupCloseIcon = document.querySelectorAll('.close-popup');
-if (popupCloseIcon.length > 0) {
+selecrorRefresh();
+function selecrorRefresh() {
+   let popupCloseIcon = document.querySelectorAll('.popup-close');
+
    for (let index = 0; index < popupCloseIcon.length; index++) {
       const el = popupCloseIcon[index];
       el.addEventListener('click', function (e) {
          const popupN = el.getAttribute('href').replace('#', '');
-         console.log(popupN);
          const curentP = document.getElementById(popupN);
          popupClose(curentP);
          e.preventDefault();
@@ -36,13 +37,17 @@ if (popupCloseIcon.length > 0) {
 function popupOpen(curentPopup) {
    if (curentPopup && unlock) {
       const popupActive = document.querySelector('.popup.open');
+      const checkPopup = curentPopup.querySelector('.modal-search__container');
+      const searchPopup = document.querySelector('.modal-search__container');
       if (popupActive) {
          popupClose(popupActive, false);
+         if (checkPopup != searchPopup) { ChangeIcon(true); }
       } else {
          bodyLock();
       }
       curentPopup.classList.add('open');
-      toggleModal();
+      if (checkPopup == searchPopup) { ChangeIcon(true); }
+
       // Закрити попап по кліку на батька
       curentPopup.addEventListener("click", function (e) {
          if (!e.target.closest('.popup__content')) {
@@ -55,7 +60,7 @@ function popupOpen(curentPopup) {
 function popupClose(popupActive, doUnlock = true) {
    if (unlock) {
       popupActive.classList.remove('open');
-      toggleModal();
+
       if (doUnlock) {
          bodyUnLock();
       }
@@ -97,23 +102,21 @@ function bodyUnLock() {
       unlock = true;
    }, timeout);
 }
-// заміняє одну кнопку на іншу
-const refs = {
-   modalButtonOpen: document.getElementById("modal-button-open"),
-   modalButtonClose: document.getElementById("modal-button-close"),
-};
 
-function toggleModal() {
-   let ovpen = false;
-   refs.modalButtonOpen.classList.toggle("is-hidden");
-   // refs.modalButtonOpen.classList.toggle("absolute");
-   setTimeout(function () {
-      refs.modalButtonOpen.classList.toggle("absolute");
-   }, timeout);
+let icon = document.querySelector('.fa-magnifying-glass');
+let switcher = document.querySelector('.popup-open');
+// switcher.addEventListener("click", function () { ChangeIcon(true) });
 
-   refs.modalButtonClose.classList.toggle("is-hidden");
-   setTimeout(function () {
-      refs.modalButtonClose.classList.toggle("absolute");
-   }, timeout);
 
+function ChangeIcon(animation = true) {
+   icon.classList.toggle("fa-magnifying-glass");
+   icon.classList.toggle("fa-x");
+   switcher.classList.toggle("popup-open");
+   switcher.classList.toggle("popup-close");
+
+   if (animation == true) { document.getElementsByClassName('header-icons__icon_switcher')[0].style = "transition: all .4s ease 0s"; }
+   if (animation == false) { document.getElementsByClassName('header-icons__icon_switcher')[0].style = "transition: all 0s ease 0s"; }
+   icon.classList.toggle("animation");
+
+   selecrorRefresh();
 }

@@ -597,6 +597,8 @@ input {
 }
 
 .header-icons__icon {
+  width: 24px;
+  height: 24px;
   font-size: 2.4rem;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -634,18 +636,14 @@ input {
           transform: translate(0px, 0px);
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+.header-icons__icon_switcher {
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
 
-.absolute {
-  top: -100%;
-  position: absolute;
+.animation {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .modal-search__container {
