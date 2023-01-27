@@ -72,19 +72,26 @@
 .header__logo {
    margin-left: 150px;
    margin-right: auto;
+
+   @media screen and (max-width: $desktop) {
+      margin-left: auto;
+   }
 }
 
-.header-icons__icon {
+.header-icon {
    width: 24px;
    height: 24px;
    font-size: 2.4rem;
    transition: all .3s ease 0s;
+   background-color: inherit;
 
    &:hover {
       color: rgba(#000, .91);
       cursor: pointer;
    }
 }
+
+
 
 .heder__modal-search {
    width: 100%;
@@ -93,6 +100,29 @@
    transform: translate(0px, -25%);
 }
 
+.header-icons {
+   @media screen and (max-width: $desktop) {
+      li {
+         &:first-child {
+            display: none;
+         }
+      }
+   }
+}
+
+.header__menu-button {
+   display: none;
+
+   @media screen and (max-width: $desktop) {
+      display: block;
+   }
+}
+
+.header__nav {
+   @media screen and (max-width: $desktop) {
+      display: none;
+   }
+}
 
 // Модальне вікно=================================================================
 .popup {
@@ -108,7 +138,7 @@
    visibility: visible;
    transform: translate(0px, 0px);
 
-   .modal-cart__content {
+   .popup-content {
       transform: translate(0px, 0px);
    }
 }
@@ -147,7 +177,7 @@
 }
 
 // Модальне вікно карти покупок======================================================
-.heder__modal-cart {
+.popup-basis {
    min-width: 100vw;
    min-height: 100vh;
    background-color: rgba(0, 0, 0, .5);
@@ -202,4 +232,55 @@
 
 .modal-cart__text {
    color: #868785;
+}
+
+/* Меню бургер ============================================================================== */
+.burger-menu__content {
+   position: fixed;
+   top: 0;
+   left: 0;
+   min-width: 42%;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   transform: translate(-100%, 0px);
+   transition: all .4s ease 0s;
+   background-color: #fff;
+}
+
+.burger-menu__header {
+   background-color: #e2e0e2;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 40px;
+}
+
+.burger-menu__circle_color_yellow {
+   animation: blob-yellow 4s linear infinite;
+}
+
+.burger-menu__circle {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+   background-color: $card-bacground-purple;
+   animation-play-state: paused;
+
+   &:hover {
+      animation-play-state: running;
+   }
+}
+
+.burger-menu__list {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   overflow-y: scroll;
+
+   li {
+      padding: 20px 0;
+   }
 }

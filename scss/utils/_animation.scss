@@ -295,3 +295,42 @@
       background-color: $features__circle_color_purple;
    }
 }
+
+@keyframes blob-yellow {
+   0% {
+      background-color: $features__circle_color_yellow;
+
+   }
+
+   17% {
+      background-color: $features__circle_color_sky;
+      border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
+
+   }
+
+   34% {
+      background-color: $features__circle_color_sapphire;
+      border-radius: 73% 27% 26% 38%/ 73% 36% 64% 27%;
+
+   }
+
+   51% {
+      background-color: $features__circle_color_blue;
+      border-radius: 28% 72% 44% 56%/ 49% 40% 60% 75%;
+
+   }
+
+   68% {
+      background-color: $features__circle_color_brown;
+      border-radius: 40% 60% 70% 30%/ 47% 62% 38% 53%;
+   }
+
+   85% {
+      background-color: $features__circle_color_red;
+      border-radius: 73% 27% 26% 38%/ 73% 36% 64% 27%;
+   }
+
+   100% {
+      background-color: $features__circle_color_yellow;
+   }
+}

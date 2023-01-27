@@ -50,8 +50,8 @@ function popupOpen(curentPopup) {
 
       // Закрити попап по кліку на батька
       curentPopup.addEventListener("click", function (e) {
-         if (!e.target.closest('.popup__content')) {
-            popupClose(e.target.closest('.popup__father-click-close'));
+         if (!e.target.closest('.popup-content_close')) {
+            popupClose(e.target.closest('.popup-father-click-close'));
          }
       });
    }
@@ -104,7 +104,7 @@ function bodyUnLock() {
 }
 
 let icon = document.querySelector('.fa-magnifying-glass');
-let switcher = document.querySelector('.popup-open');
+let switcher = document.querySelector('.popup-open-search');
 // switcher.addEventListener("click", function () { ChangeIcon(true) });
 
 

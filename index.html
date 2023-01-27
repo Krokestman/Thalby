@@ -17,6 +17,7 @@
    <div class="wrapper">
       <header class="header">
          <div class="header__container">
+            <a href="#popup-menu" class="popup-open"><button class="header__menu-button header-icon"><i class="fa-solid fa-bars"></i></button></a>
             <nav class="header__nav header-nav">
                <ul class="header-nav__list list">
                   <li><a href="#" class="header-nav__link link sub-title">Shop</a></li>
@@ -29,16 +30,18 @@
             <a href="index.html" class="header__logo logo">thalby</a>
 
             <ul class="header__icons header-icons list">
-               <li><a href="https://www.instagram.com/" target="_blank"><i class="header-icons__icon fa-brands fa-instagram link"></i></a></li>
+               <li><a href="https://www.instagram.com/" target="_blank"><i class="header-icons__icon header-icon  fa-brands fa-instagram link"></i></a></li>
                <li id="modal-button-open">
-                  <a href="#popup-search" class="popup-open"><i class="fa-solid header-icons__icon header-icons__icon_switcher fa-magnifying-glass"></i></a>
+                  <a href="#popup-search" class="popup-open popup-open-search"><i
+                        class="fa-solid header-icons__icon header-icon header-icons__icon_switcher fa-magnifying-glass"></i></a>
                </li>
                <li id="modal-button-open">
-                  <a href="#popup-cart" class="popup-open"><i class="header-icons__icon fa-sharp fa-solid fa-lock"></i></a>
+                  <a href="#popup-cart" class="popup-open"><i class="header-icons__icon header-icon fa-solid fa-basket-shopping"></i></a>
                </li>
             </ul>
          </div>
 
+         <!-- Пошук -->
          <div class="heder__modal-search modal-search popup" id="popup-search">
             <div class="modal-search__container popup__content">
                <i class="modal-search__icon fa-solid fa-magnifying-glass"></i>
@@ -46,13 +49,14 @@
             </div>
          </div>
 
-         <div class="heder__modal-cart modal-cart popup__father-click-close popup" id="popup-cart">
-            <div class="modal-cart__content popup__content">
+         <!-- Карта покупок -->
+         <div class="heder__modal-cart modal-cart popup-basis popup-father-click-close popup" id="popup-cart">
+            <div class="modal-cart__content popup-content popup-content_close">
 
                <div class="modal-cart__header">
                   <h1 class="modal-cart__title">Shopping Cart</h1>
                   <li class="modal-cart__button-close" id="modal-button-close">
-                     <a href="#popup-cart" class="popup-close"><i class="fa-sharp fa-solid fa-circle-xmark header-icons__icon"></i></a>
+                     <a href="#popup-cart" class="popup-close"><i class="fa-sharp fa-solid fa-circle-xmark header-icon"></i></a>
                   </li>
                </div>
 
@@ -73,6 +77,39 @@
                      </svg>
                      <p class="modal-cart__text">Your cart is empty.</p>
                   </div>
+               </div>
+
+            </div>
+         </div>
+
+         <!-- Меню бургер -->
+         <div class="heder__menu burger-menu popup-basis popup-father-click-close popup" id="popup-menu">
+            <div class="burger-menu__content popup-content popup-content_close">
+
+               <div class="burger-menu__header">
+                  <button class="burger-menu__header-icon" id="modal-button-open">
+                     <a href="#popup-search" class="popup-open popup-open-search">
+                        <i class="fa-solid header-icons__icon header-icon header-icons__icon_switcher fa-magnifying-glass"></i>
+                     </a>
+                  </button>
+                  <a href="index.html" class="burger-menu__logo logo">thalby</a>
+                  <button class="burger-menu__header-icon" id="modal-button-close">
+                     <a href="#popup-menu" class="popup-close"><i class="fa-solid fa-x header-icon"></i></a>
+                  </button>
+               </div>
+
+               <div class="burger-menu__body">
+                  <ul class="burger-menu__list">
+                     <li><a href="#" class=" sub-title">Shop</a></li>
+                     <li><a href="#" class=" sub-title">Collections</a></li>
+                     <li><a href="#" class=" sub-title">Try a Free Guide</a></li>
+                     <li><a href="#" class=" sub-title">Stories</a></li>
+                     <li class="burger-menu__circle burger-menu__circle_color_yellow"></li>
+                     <li><a href="#" class=" sub-title">About</a></li>
+                     <li><a href="#" class=" sub-title">Write for Us</a></li>
+                     <li><a href="#" class=" sub-title">Help</a></li>
+                     <li class="header-icon"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></i></li>
+                  </ul>
                </div>
 
             </div>

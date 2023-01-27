@@ -53,6 +53,10 @@ input {
    outline: none;
 }
 
+button {
+   background-color: inherit;
+}
+
 .wrapper {
    min-height: 100%;
    overflow: hidden;
@@ -67,4 +71,10 @@ input {
 [class*="__container"] {
    max-width: 1170px;
    margin: 0 auto;
+}
+
+@media screen and (max-width: 1199.98px) {
+   [class*="__container"] {
+      max-width: 750px;
+   }
 }
