@@ -9,6 +9,7 @@
 
 .main-banner__left-holder {
    width: 50%;
+   z-index: 2;
 }
 
 .main-banner__right-holder {
@@ -19,6 +20,10 @@
 
    img {
       width: 100%;
+
+      @media screen and (max-width: $desktop) {
+         transform: scale(1.4);
+      }
    }
 }
 
@@ -30,6 +35,10 @@
    line-height: calc(70px/60px);
    margin-top: 90px;
    margin-bottom: 42px;
+
+   @media screen and (max-width: $desktop) {
+      margin-top: 50px;
+   }
 }
 
 .main-banner__text {
@@ -57,4 +66,8 @@
       background-color: rgba($color: #000, $alpha: .0);
       color: $text-color;
    }
+}
+
+.main-banner__button {
+   margin-bottom: 38px;
 }

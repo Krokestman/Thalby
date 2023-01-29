@@ -896,6 +896,15 @@ button {
   padding: 40px;
 }
 
+.burger-menu__header-icon {
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.burger-menu__header-icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .burger-menu__circle_color_yellow {
   -webkit-animation: blob-yellow 4s linear infinite;
           animation: blob-yellow 4s linear infinite;
@@ -903,7 +912,7 @@ button {
 
 .burger-menu__circle {
   width: 70px;
-  height: 70px;
+  min-height: 70px;
   border-radius: 50%;
   background-color: #D9A7E3;
   -webkit-animation-play-state: paused;
@@ -928,11 +937,28 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
-  overflow-y: scroll;
 }
 .burger-menu__list li {
   padding: 20px 0;
+}
+.burger-menu__list li a {
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.burger-menu__list li a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.burger-menu__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: calc(100vh - 130px);
+  overflow: auto;
 }
 
 .page__main-banner {
@@ -948,6 +974,7 @@ button {
 
 .main-banner__left-holder {
   width: 50%;
+  z-index: 2;
 }
 
 .main-banner__right-holder {
@@ -965,6 +992,12 @@ button {
 .main-banner__right-holder img {
   width: 100%;
 }
+@media screen and (max-width: 1199.98px) {
+  .main-banner__right-holder img {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+}
 
 .main-banner__title {
   font-family: "Roboto";
@@ -974,6 +1007,11 @@ button {
   line-height: 1.1666666667;
   margin-top: 90px;
   margin-bottom: 42px;
+}
+@media screen and (max-width: 1199.98px) {
+  .main-banner__title {
+    margin-top: 50px;
+  }
 }
 
 .main-banner__text {
@@ -1001,6 +1039,10 @@ button {
 .button:hover {
   background-color: rgba(0, 0, 0, 0);
   color: #000000;
+}
+
+.main-banner__button {
+  margin-bottom: 38px;
 }
 
 .about__container {

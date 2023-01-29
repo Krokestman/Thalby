@@ -256,13 +256,21 @@
    padding: 40px;
 }
 
+.burger-menu__header-icon {
+   transition: all .4s ease 0s;
+
+   &:hover {
+      transform: scale(1.1);
+   }
+}
+
 .burger-menu__circle_color_yellow {
    animation: blob-yellow 4s linear infinite;
 }
 
 .burger-menu__circle {
    width: 70px;
-   height: 70px;
+   min-height: 70px;
    border-radius: 50%;
    background-color: $card-bacground-purple;
    animation-play-state: paused;
@@ -277,10 +285,23 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   overflow: hidden;
-   overflow-y: scroll;
 
    li {
+      a {
+         transition: all .4s ease 0s;
+
+         &:hover {
+            color: rgba(#000000, .7);
+         }
+      }
+
       padding: 20px 0;
    }
+}
+
+.burger-menu__body {
+   display: flex;
+   flex-direction: column;
+   max-height: calc(100vh - 130px);
+   overflow: auto;
 }
