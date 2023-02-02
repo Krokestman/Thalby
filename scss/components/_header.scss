@@ -2,13 +2,17 @@
    background-color: $primary-color;
    position: fixed;
    width: 100vw;
+   left: 0;
+   right: 0;
    z-index: 20;
 }
 
 .header__container {
    display: flex;
    align-items: center;
+   justify-content: space-between;
    min-height: 60px;
+   position: relative;
 }
 
 .list {
@@ -47,6 +51,7 @@
    font-style: normal;
    position: relative;
    transition: .3s;
+   border-bottom: 3px solid transparent;
 
    &::before {
       position: absolute;
@@ -64,18 +69,22 @@
    }
 
    &:hover {
-      box-shadow: 0px 3px 0px 0px #000000;
+      border-color: #000;
       border-radius: 25%;
    }
 }
 
 .header__logo {
-   margin-left: 150px;
+   /*    margin-left: 150px;
    margin-right: auto;
 
    @media screen and (max-width: $desktop) {
       margin-left: auto;
-   }
+   } */
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
 }
 
 .header-icon {
@@ -209,6 +218,7 @@
    font-size: 2.2rem;
    line-height: 1.18;
    text-align: center;
+   margin-right: 10px;
 }
 
 .modal-cart__body {
@@ -265,7 +275,7 @@
 }
 
 .burger-menu__circle_color_yellow {
-   animation: blob-yellow 4s linear infinite;
+   animation: blob-yellow 8s linear infinite;
 }
 
 .burger-menu__circle {
@@ -273,11 +283,6 @@
    min-height: 70px;
    border-radius: 50%;
    background-color: $card-bacground-purple;
-   animation-play-state: paused;
-
-   &:hover {
-      animation-play-state: running;
-   }
 }
 
 .burger-menu__list {
@@ -302,6 +307,17 @@
 .burger-menu__body {
    display: flex;
    flex-direction: column;
-   max-height: calc(100vh - 130px);
+   height: calc(100vh - 120.5px);
    overflow: auto;
+
+   &::-webkit-scrollbar {
+      width: 10px;
+      background-color: rgba(26, 24, 47, 0.15);
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background: #ababac;
+      box-shadow: -3px 0px 10px -4px #000000;
+      border-radius: 5px;
+   }
 }

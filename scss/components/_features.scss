@@ -1,5 +1,9 @@
 .page__features {
    margin-top: 190px;
+
+   @media screen and (max-width: $desktop) {
+      margin-top: 160px;
+   }
 }
 
 .features__title {
@@ -61,7 +65,7 @@
 }
 
 .features__circle_color_purple {
-   animation: blob-purple 10s linear infinite;
+   animation: blob-purple 4s linear infinite;
 }
 
 .features__circle {

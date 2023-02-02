@@ -20,13 +20,24 @@
    &:last-child {
       margin-right: 0;
    }
+
+   @media screen and (max-width: $desktop) {
+      margin-right: 30px;
+      width: calc((100% - 2 * 30px) / 3);
+   }
 }
 
 .card {
+   width: 100%;
    border: 15px solid #000;
    border-radius: 30px;
    padding: 15px;
    background-color: $card-bacground-purple;
+
+   @media screen and (max-width: $desktop) {
+      border: 10px solid #000;
+      padding: 10px;
+   }
 }
 
 .card__top-wrapper {
@@ -34,7 +45,8 @@
 }
 
 .card__holder_left {
-   width: 50%;
+   width: 49%;
+   margin-right: 2px;
 }
 
 .card__title {
@@ -44,6 +56,10 @@
    font-size: 3rem;
    line-height: calc(27 / 30);
    max-width: 145px;
+
+   @media screen and (max-width: $desktop) {
+      font-size: 2rem;
+   }
 }
 
 .card__sub-title {
@@ -54,6 +70,11 @@
    line-height: calc(15 / 15);
    margin-top: 13px;
    margin-bottom: 20px;
+
+   @media screen and (max-width: $desktop) {
+      font-size: 1rem;
+      margin-top: 15px;
+   }
 }
 
 .card__item {
@@ -66,6 +87,10 @@
    &:last-child {
       border-bottom: 1px solid $card-underline-color;
       font-weight: 700;
+   }
+
+   @media screen and (max-width: $desktop) {
+      font-size: 1rem;
    }
 }
 
@@ -85,6 +110,13 @@
       line-height: 20px;
       color: #fff;
       font-weight: 700;
+
+      @media screen and (max-width: $desktop) {
+         width: 15px;
+         height: 15px;
+         line-height: 15px;
+         font-size: 1rem;
+      }
    }
 }
 
@@ -93,12 +125,14 @@
    display: flex;
    justify-content: center;
    margin-bottom: 10px;
+   width: 100%;
+   padding-bottom: 100%;
 }
 
 .card__img-text {
    position: absolute;
-   width: 110px;
-   height: 110px;
+   width: 38%;
+   height: 38%;
    left: 0;
    top: -2%;
    border: 10px double #fff;
@@ -109,11 +143,23 @@
    display: flex;
    text-align: center;
    align-items: center;
+   z-index: 2;
+   font-size: 1.6rem;
+
+   @media screen and (max-width: $desktop) {
+      font-size: 1.3rem;
+      width: 50%;
+      height: 50%;
+   }
 }
 
 .card__img {
-   width: 290px;
-   height: 290px;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
    border: 5px solid white;
    border-radius: 50%;
    background-color: #fff;
@@ -127,6 +173,10 @@
 
    span {
       font-weight: 700;
+   }
+
+   @media screen and (max-width: $desktop) {
+      font-size: .9rem;
    }
 }
 
@@ -153,7 +203,7 @@
 }
 
 .text-underline {
-   display: inline-block;
+   display: block;
    font-family: 'Roboto';
    font-style: normal;
    font-weight: 700;

@@ -69,8 +69,15 @@ button {
 }
 
 [class*="__container"] {
-   max-width: 1170px;
+   max-width: 1200px;
    margin: 0 auto;
+   padding: 0 15px;
+}
+
+section {
+   width: 100vw;
+   left: 0;
+   right: 0;
 }
 
 @media screen and (max-width: 1199.98px) {
